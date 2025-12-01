@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Database | Blue Lock Organization</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;500;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .player-card {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+            border-color: var(--color-accent);
+        }
+
+        .player-img-container {
+            height: 300px;
+            background: #151b2e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .player-card:hover .player-img-container img {
+            transform: scale(1.1);
+        }
+
+        .player-rank {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--color-accent);
+            color: var(--color-bg);
+            padding: 0.25rem 0.75rem;
+            font-family: var(--font-header);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .player-info {
+            padding: 1.5rem;
+        }
+
+        .player-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .player-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            color: var(--color-text-muted);
+        }
+
+        .stat-value {
+            color: var(--color-text);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .ego-score {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ego-label {
+            font-family: var(--font-header);
+            font-size: 0.8rem;
+            color: var(--color-accent);
+        }
+
+        .ego-value {
+            font-family: var(--font-header);
+            font-size: 1.2rem;
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">BLUE <span>LOCK</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+                    <li><a href="divisions.html" class="nav-link">Divisions</a></li>
+                    <li><a href="program.html" class="nav-link">Program</a></li>
+                    <li><a href="players.html" class="nav-link active">Database</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="careers.html" class="btn btn-primary">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h1>Player Database</h1>
+                <p class="hero-desc">Current roster of candidates undergoing the Blue Lock selection process.</p>
+
+                <!-- Filters (Visual only for now) -->
+                <div style="margin: 2rem 0; display: flex; gap: 1rem;">
+                    <button class="btn btn-primary">All</button>
+                    <button class="btn">Top 10</button>
+                    <button class="btn">Team Z</button>
+                    <button class="btn">Team V</button>
+                </div>
+
+                <div class="grid grid-4">
+                    <!-- Isagi Yoichi -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <!-- Placeholder -->
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#15</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Yoichi Isagi</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">17</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Spatial Awareness</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">88</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bachira Meguru -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#16</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Meguru Bachira</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">17</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Dribbling</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">86</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kunigami Rensuke -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#50</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Rensuke Kunigami</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">17</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Lefty Shot</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">85</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chigiri Hyoma -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#44</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Hyoma Chigiri</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">17</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Speed</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">87</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nagi Seishiro -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#7</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Seishiro Nagi</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">17</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Trapping</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">92</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reo Mikage -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#10</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Reo Mikage</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">17</span>
+                                <span class="stat-label">Position</span><span class="stat-value">MF</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Versatility</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">89</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rin Itoshi -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#1</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Rin Itoshi</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">16</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Puppeteer</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">98</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Barou Shouei -->
+                    <div class="player-card">
+                        <div class="player-img-container">
+                            <div
+                                style="width:100%; height:100%; background:#1f293a; display:flex; align-items:center; justify-content:center; color:#333; font-size:3rem;">
+                                <i class="fas fa-user"></i></div>
+                            <div class="player-rank">#13</div>
+                        </div>
+                        <div class="player-info">
+                            <h3 class="player-name">Shouei Barou</h3>
+                            <div class="player-stats">
+                                <span class="stat-label">Age</span><span class="stat-value">18</span>
+                                <span class="stat-label">Position</span><span class="stat-value">FW</span>
+                                <span class="stat-label">Weapon</span><span class="stat-value">Charge</span>
+                            </div>
+                            <div class="ego-score">
+                                <span class="ego-label">EGO SCORE</span>
+                                <span class="ego-value">90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">BLUE <span>LOCK</span></a>
+                    <p>Engineering the ultimate egoist. The future of Japanese football starts here.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Organization</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="divisions.html">Departments</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Program</h4>
+                    <ul class="footer-links">
+                        <li><a href="program.html">The Blue Lock</a></li>
+                        <li><a href="players.html">Player Database</a></li>
+                        <li><a href="news.html">Newsroom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Tokyo HQ</a></li>
+                        <li><a href="mailto:info@bluelock.org">info@bluelock.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Blue Lock Organization. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

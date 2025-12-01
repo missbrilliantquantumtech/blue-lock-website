@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership | Blue Lock Organization</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;500;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .profile-card {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+            border-color: var(--color-accent);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #333;
+            margin: 0 auto 1.5rem;
+            border: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--color-text-muted);
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-role {
+            color: var(--color-accent);
+            font-family: var(--font-header);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">BLUE <span>LOCK</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="leadership.html" class="nav-link active">Leadership</a></li>
+                    <li><a href="divisions.html" class="nav-link">Divisions</a></li>
+                    <li><a href="program.html" class="nav-link">Program</a></li>
+                    <li><a href="players.html" class="nav-link">Database</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="careers.html" class="btn btn-primary">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h1>Board of Directors</h1>
+                <p class="hero-desc">The visionaries behind the Blue Lock Project.</p>
+
+                <div class="grid grid-3" style="margin-top: 4rem;">
+                    <!-- Anri Teieri -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <!-- Placeholder for Anri -->
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="profile-role">Chairman</div>
+                        <h3 class="profile-name">Anri Teieri</h3>
+                        <p class="profile-desc">The founder of the Blue Lock project. A visionary leader dedicated to
+                            transforming Japanese football through radical innovation.</p>
+                    </div>
+
+                    <!-- Jinpachi Ego -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <!-- Placeholder for Ego -->
+                            <i class="fas fa-glasses"></i>
+                        </div>
+                        <div class="profile-role">Project Director</div>
+                        <h3 class="profile-name">Jinpachi Ego</h3>
+                        <p class="profile-desc">The mastermind behind the Blue Lock training regimen. His unconventional
+                            methods focus on cultivating the "ego" of a striker.</p>
+                    </div>
+
+                    <!-- Dr. Haruto Kamiya -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="profile-role">Chief Data Scientist</div>
+                        <h3 class="profile-name">Dr. Haruto Kamiya</h3>
+                        <p class="profile-desc">Leads the analytics division, utilizing advanced metrics to evaluate
+                            player performance and potential evolution.</p>
+                    </div>
+
+                    <!-- Dr. Reina Satsuki -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="profile-role">Medical Director</div>
+                        <h3 class="profile-name">Dr. Reina Satsuki</h3>
+                        <p class="profile-desc">Oversees the physical well-being of all candidates, ensuring peak
+                            performance through cutting-edge sports medicine.</p>
+                    </div>
+
+                    <!-- Takuma Rindo -->
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="profile-role">Security & Facilities</div>
+                        <h3 class="profile-name">Takuma Rindo</h3>
+                        <p class="profile-desc">Responsible for the security of the Blue Lock facility and the
+                            logistical operations of the selection process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">BLUE <span>LOCK</span></a>
+                    <p>Engineering the ultimate egoist. The future of Japanese football starts here.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Organization</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="divisions.html">Departments</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Program</h4>
+                    <ul class="footer-links">
+                        <li><a href="program.html">The Blue Lock</a></li>
+                        <li><a href="players.html">Player Database</a></li>
+                        <li><a href="news.html">Newsroom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Tokyo HQ</a></li>
+                        <li><a href="mailto:info@bluelock.org">info@bluelock.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Blue Lock Organization. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
